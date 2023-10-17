@@ -3017,18 +3017,6 @@ html.dark-mode .footer-cta-title {
     background: none;
 }
 
-#tags {
-    list-style-type: none;
-    display: flex;
-    gap: 10px;
-    border-radius: 40%;
- }
-
-  #tags li {
-    padding: 8px 16px;
-    background: #F2F2F2;
- }
-
 /*
 
 Hey! You reached the end.
@@ -3043,6 +3031,3 @@ file to add some of your own styles. Well, you've come to
 the right place. Onward!
 
  */
-
-
- /* custom styling */

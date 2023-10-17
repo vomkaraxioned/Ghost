@@ -14,6 +14,21 @@ into the {body} tag of the default.hbs template --}}
 
         <h1 class="article-title">{{title}}</h1>
 
+         <div class="article-tag post-card-tags">
+            {{#if featured}}
+                <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
+            {{/if}}
+              {{#if tags}}
+                <ul>
+                    {{#foreach tags}}
+                        <li class="post-card-primary-tag">
+                            <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">#{{name}}</a>
+                        </li>
+                    {{/foreach}}
+                </ul>
+            {{/if}}
+        </div>
+
         {{#if custom_excerpt}}
             <p class="article-excerpt">{{custom_excerpt}}</p>
         {{/if}}
@@ -82,20 +97,6 @@ into the {body} tag of the default.hbs template --}}
     {{/if}}
 
 </article>
- <div class="article-tag post-card-tags">
-            {{#if featured}}
-                <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
-            {{/if}}
-              {{#if tags}}
-                <ul class="tags" id="tags">
-                    {{#foreach tags}}
-                        <li class="post-card-primary-tag">
-                            <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">#{{name}}</a>
-                        </li>
-                    {{/foreach}}
-                </ul>
-            {{/if}}
-        </div>
 </main>
 
 {{!-- A signup call to action is displayed here, unless viewed as a logged-in member --}}
