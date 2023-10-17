@@ -2051,7 +2051,7 @@ iframe.instagram-media + script + :not([id]) {
     padding-top: 48px;
     padding-bottom: 140px;
     color: #fff;
-    background: color-mod(var(--color-darkgrey) l(-5%));
+    background: color-mod(var(--bradcolor) l(-5%));
 }
 
 .page-template .site-footer {
@@ -3017,6 +3017,18 @@ html.dark-mode .footer-cta-title {
     background: none;
 }
 
+#tags {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    border-radius: 40%;
+ }
+
+  #tags li {
+    padding: 8px 16px;
+    background: #F2F2F2;
+ }
+
 /*
 
 Hey! You reached the end.
@@ -3031,3 +3043,6 @@ file to add some of your own styles. Well, you've come to
 the right place. Onward!
 
  */
+
+
+ /* custom styling */
