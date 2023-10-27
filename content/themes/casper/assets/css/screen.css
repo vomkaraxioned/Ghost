@@ -3031,3 +3031,30 @@ file to add some of your own styles. Well, you've come to
 the right place. Onward!
 
  */
+
+ /* custom styling */
+
+ .tag-list {
+    max-width: 720px;
+     padding: 10px 0;
+     margin-top: 30px;
+     display: flex;
+     gap: 10px;
+    list-style-type: none;
+ }
+
+ .tag-list li {
+    margin: 0;
+ }
+
+ .tag-list li a,.post-card-content .post-card-tags span{
+    padding: 8px 16px;
+    border-radius: 50px;
+    background: #F2F2F2;
+    color: #242424;
+    text-decoration: none;
+ }
+
+ .post-card-content .post-card-tags {
+    margin: 0;
+ }

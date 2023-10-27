@@ -210,7 +210,14 @@ production stylesheet in assets/built/screen.css
 }
 
 @media (min-width: 992px) {
-
+    .read-more-btn:hover {
+        background: #fff;
+        color: #E31C79;
+    }
+    
+    .read-more-btn:hover svg{
+        stroke: #E31C79;
+    }
 }
 
 @media (max-width: 991px) {
@@ -415,17 +422,18 @@ production stylesheet in assets/built/screen.css
 .navigation { display: none;}
 
 .navigation ul{
+    width: 100%;
     padding: 0;
     display: flex;
-    list-style-type: none;
-    row-gap: 3.8%;
+    font-family: "Proxima Nova Bold";
     justify-self: end;
     justify-content: center;
+    list-style-type: none;
 }
 
 .navigation ul li {
   margin-top: 0;
-  margin-right: 3.8%;
+  margin-right: 2.8%;
 }
 
 
@@ -531,6 +539,12 @@ production stylesheet in assets/built/screen.css
     flex-basis: 50%;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+}
+
+.header-wrapper h1 img{
+    width: 159px;
+    height: 63px;
 }
 }
 
@@ -1028,10 +1042,6 @@ production stylesheet in assets/built/screen.css
     font-weight: 800;
     line-height: 1.2;
     color: var(--brandcolor);
-}
-
-.post-card-title:hover {
-    color: #E31C79;
 }
 
 .post-card-content-link:hover .post-card-title {
@@ -3105,3 +3115,70 @@ the right place. Onward!
  .post-card-content .post-card-tags {
     margin: 0;
  }
+
+.featured-section {
+    padding: 70px 0;
+    border-bottom: 1px solid #E31C79;
+}
+
+.featured-section h2,.featured-section h3,.featured-section .featured-title {
+    font-family: "Proxima Nova Bold";
+    color: var(--brandcolor);
+}
+
+.featured-section .featured-title  { display: block;}
+
+.featured-section-wrapper {
+    width: 73.5%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.featured-section .highlighted {
+    padding: 20px;
+    margin-right: 3%;
+    background: #ebebeb;
+    flex-basis: 57%;
+}
+
+.featured-section .highlighted span {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.featured-section .highlighted .btn-container { 
+    display: flex;
+    justify-content: end;
+}
+
+.read-more-btn {
+    padding: 4px 4%;
+    border: 1px solid #E31C79;
+    border-radius: 2px;
+    background: #E31C79;
+    color: #fff;
+}
+
+.featured-list-container h2{
+    padding-bottom:8px;
+    margin-top: 0;
+    border-bottom: 1px solid #E31C79;
+}
+
+/* .featured-list-container h3 { margin-top: 0;} */
+
+.featured-list-container ul {
+    list-style-type: none;
+}
+
+.featured-section .featured-list-container {
+    flex-basis: 40%;
+}
+
+.featured-list-container h3 {  font-size: 18px;}
+
+.featured-list-container li:hover { background-color: #e1e1e1}
+
+.featured-section .author-name { color: #E31C79;}
+
+.featured-section .article-excerpt { font-size: 14px;}
