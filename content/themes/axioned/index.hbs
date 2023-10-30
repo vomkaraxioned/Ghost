@@ -42,9 +42,9 @@ into the {body} of the default.hbs template --}}
     {{!-- featured insight template goes here --}}
     <section class="featured-section">
             <div class="featured-section-wrapper">
-                <div class="highlighted">
        {{#foreach posts}}
             {{#if featured }}
+                <div class="highlighted">
               {{#if feature_image}}
             <a class="post-card-image-link" href="{{url}}">
 
@@ -67,16 +67,16 @@ into the {body} of the default.hbs template --}}
     {{#if custom_excerpt}}
             <p class="article-excerpt">{{custom_excerpt}}</p>
     {{/if}}
-     <span>By {{authors}}</span>
+     <span class="author-name">By {{authors}}</span>
      <div class="btn-container">
         <a class="read-more-btn" title="Read More" href="{{url}}">
         Read more
         {{> "icons/chevron"}}
      </a>
      </div>
+    </div>
             {{/if}}
        {{/foreach}}
-    </div>
    <div class="featured-list-container">
     <h2>Featured Insights</h2>
      <ul>
@@ -87,7 +87,7 @@ into the {body} of the default.hbs template --}}
                     <span class="featured-title">
                     {{title}}
                     </span>
-                    <span>By <span  class="author-name">{{authors}}</span>
+                    <span class="author-name">By {{authors}}</span>
                     </a>
                </li>
             {{/if}}

@@ -27,7 +27,7 @@
 
     <header id="gh-head" class="gh-head outer{{#match @custom.header_style "Hidden"}} is-header-hidden{{/match}}">
      <div class="header-wrapper">
-        <h1>
+        <h1 class="logo">
              <a title="Axioned" href="{{@site.url}}">
                     {{#if @site.logo}}
                         <img src="{{@site.logo}}" alt="{{@site.title}}">
@@ -60,7 +60,9 @@
 
     <div class="site-content">
         {{!-- All other templates get inserted here, index.hbs, post.hbs, etc --}}
-            {{{body}}}
+           <div  class="site-content-wrapper">
+             {{{body}}}
+           </div>
     </div>
 
     {{!-- The global footer at the very bottom of the screen --}}
@@ -87,6 +89,7 @@
     crossorigin="anonymous">
 </script>
 <script src="{{asset "built/casper.js"}}"></script>
+<script src="helper.js"></script>
 <script>
 $(document).ready(function () {
     // Mobile Menu Trigger
@@ -95,8 +98,17 @@ $(document).ready(function () {
     });
     // FitVids - Makes video embeds responsive
     $(".gh-content").fitVids();
+    const nav = $(".navigation");
+    const header = $("#gh-head");
+    const hamburger =  $(".hamburger");
+   hamburger.click(()=>{
+        hamburger.toggleClass("active");
+        nav.toggleClass("show");
+        nav.toggleClass("active-nav");
+        header.toggleClass("active");
+       $("html").toggleClass("stop-scroll")
+    })
 });
-
 </script>
 
 {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}

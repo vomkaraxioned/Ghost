@@ -74,15 +74,15 @@ into the {body} tag of the default.hbs template --}}
     <section class="gh-content gh-canvas">
         {{content}}
          <div class="article-tag post-card-tags">
-            {{#if featured}}
-                <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
-            {{/if}}
               {{#if tags}}
                 <ul class="tag-list">
                     {{#foreach tags}}
-                        <li class="post-card-primary-tag">
+                       {{#match name  "prioritize"}}
+                       {{else}}
+                         <li class="post-card-primary-tag">
                             <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
                         </li>
+                       {{/match}}
                     {{/foreach}}
                 </ul>
             {{/if}}
